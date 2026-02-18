@@ -174,6 +174,8 @@
 
         try {
             executeAction(charIDToTypeID("Mk  "), desc, DialogModes.NO);
+            // The action created a new merged layer; remove the empty "Stamp" layer
+            try { stamp.remove(); } catch (ignore) {}
         } catch (e) {
             // Fallback: Select All > Copy Merged > Paste
             stamp.remove();

@@ -439,7 +439,8 @@ def process_layer_for_back_view(
     result = mirror_horizontal(rgba)
 
     if role == "shirt_base" and shirt_mask is not None:
-        result = raise_neckline(result, shirt_mask, fill_ratio=0.55)
+        mirrored_mask = mirror_horizontal(shirt_mask)
+        result = raise_neckline(result, mirrored_mask, fill_ratio=0.55)
 
     return result
 

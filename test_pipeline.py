@@ -243,7 +243,7 @@ def test_neckline_detection():
     assert top_y < bottom_y, f"Neckline top ({top_y}) should be above bottom ({bottom_y})"
     assert left_x < right_x, f"Neckline left ({left_x}) should be left of right ({right_x})"
     # Neckline should be in the upper portion
-    assert top_y < 800 * 0.3, f"Neckline top ({top_y}) should be in upper 30%"
+    assert top_y < 1000 * 0.3, f"Neckline top ({top_y}) should be in upper 30% of height"
 
     print(f"  find_neckline_region: PASSED (y={top_y}-{bottom_y}, x={left_x}-{right_x})")
 
